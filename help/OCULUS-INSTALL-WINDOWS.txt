@@ -1,0 +1,21 @@
+To install Oculus SDK 1.5+, please follow these steps.
+
+0. Verify that you can run triangle.exe normally.
+
+1. Install Oculus Runtime (if you haven't already)
+
+2. Download the Oculus SDK 1.5+ from the website (1.5/1.6 were tested to work): 
+https://developer.oculus.com/
+
+3. Open the appropriate LibOVR vcxproj file using Visual Studio. To do this, navigate
+to opengl-libs/OculusSDK/LibOVR/Projects/Windows/VS2015 (or similar) and open the vcxproj file.
+Then, build LibOVR.
+
+4. Open cmake-gui for the opengl-examples folder. Click "File | Delete cache". Then click the 
+"configure" button and confirm that it reports that it "Found OVR". Then click "generate".
+
+5. Reopen the opengl-examples project in Visual Studio, when prompted reload the files from 
+disk. Try to rebuild the triangle solution again to confirm that the compilation process works.
+
+6. Run "triangle.exe --config ../config/oculus.ini" to confirm that the triangle program
+works with your Oculus.
